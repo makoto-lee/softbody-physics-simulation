@@ -53,7 +53,12 @@ class Scene {
 
         // let every spring in softbody to work
         for (let idx in this.softbody_dict) {
-            this.softbody_dict[idx].spring_update();
+            this.softbody_dict[idx].springUpdate();
+        }
+
+        // pevent self collision
+        for (let idx in this.softbody_dict) {
+            this.softbody_dict[idx].antiSelfCollapse();
         }
 
 
@@ -110,7 +115,7 @@ class Scene {
 
         // let every node in softbody to move
         for (let idx in this.softbody_dict) {
-            this.softbody_dict[idx].node_update();
+            this.softbody_dict[idx].nodeUpdate();
         }
 
 

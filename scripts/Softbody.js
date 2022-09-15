@@ -45,17 +45,39 @@ class Softbody {
         }
     }
 
-    spring_update() {
+    springUpdate() {
 
         for (let idx in this.spring_array) {
             this.spring_array[idx].update();
         }
     }
 
-    node_update() {
+    nodeUpdate() {
 
         for (let idx in this.node_array) {
             this.node_array[idx].update();
+        }
+    }
+
+    antiSelfCollapse() {
+
+        for (let idx in this.spring_array) {
+
+            // if the distance betwween 2 nodes less than spring length / 2
+            let node1_tmp = this.spring_array[idx].node1;
+            let node2_tmp = this.spring_array[idx].node2;
+            let diff_vector = p5.Vector.sub(node1_tmp.position, node2_tmp.position)
+            let curr_distance = diff_vector.mag();
+
+            if (curr_distance < this.spring_array[idx].fix_length / 2) {
+
+                let diff_distance = this.spring_array[idx].fix_length / 2 - curr_distance;
+                let shift_vector = p5.Vector.mult(p5.Vector.normalize(diff_vector), diff_distance / 2);
+
+                this.spring_array[idx].node1.position = p5.Vector.add(node1_tmp.position, shift_vector);
+
+                this.spring_array[idx].node2.position = p5.Vector.add(node2_tmp.position, p5.Vector.mult(shift_vector, -1));
+            }
         }
     }
 }

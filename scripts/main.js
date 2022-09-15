@@ -23,10 +23,9 @@ function draw() {
 
 function start() {
 
-    let soft_square = new RectangleSoftbody(3, 3, 15, 15);
+    let soft_square = new RectangleSoftbody(3, 8, 15, 15);
 
-    soft_square.setPosition(canvas_height / 2, 60);
-
+    soft_square.setPosition(canvas_height / 2, 20);
 
     main_scene.addSoftbodyObject(soft_square, "main_square");
 
@@ -48,7 +47,7 @@ function start() {
     triangle_1.addEndPoint(0, 50);
     triangle_1.setPosition(280, 150);
 
-    main_scene.addGround(triangle_1, "t1");
+    //main_scene.addGround(triangle_1, "t1");
 
     //
     let triangle_2 = new PolyGround();
@@ -58,7 +57,7 @@ function start() {
     triangle_2.addEndPoint(0, 50);
     triangle_2.setPosition(420, 180);
 
-    main_scene.addGround(triangle_2, "t2");
+    //main_scene.addGround(triangle_2, "t2");
 
 }
 
