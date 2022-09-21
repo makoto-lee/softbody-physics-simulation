@@ -11,7 +11,7 @@ reference :
 [1]https://www.youtube.com/watch?v=kyQP4t_wOGI&t=506s&ab_channel=Gonkee
 [2]https://www.researchgate.net/publication/228574502_How_to_implement_a_pressure_soft_body_model
 
-results :
+demo :
 
 ![](https://github.com/makoto-lee/softbody-physics-simulation/blob/main/gif/BKTMaPD.gif)
 
