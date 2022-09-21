@@ -13,7 +13,7 @@ reference :
 
 results :
 
-![](https://i.imgur.com/BKTMaPD.gif =400x)
+![](https://github.com/makoto-lee/softbody-physics-simulation/blob/main/gif/BKTMaPD.gif)
 
-![](https://i.imgur.com/tmyB9zg.gif =400x)
+![](https://github.com/makoto-lee/softbody-physics-simulation/blob/main/gif/tmyB9zg.gif)
 
